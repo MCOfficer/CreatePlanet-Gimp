@@ -64,16 +64,17 @@ The first element is always the actual size, the second one the 2x size (if prom
 def get_outputwidth(planetrand, planettype, generate2x, planetwidth):
     outputwidth = []
     planetint = int(planetwidth)
-    if planettype == 0:
-        planetint = random.randint(150, 210)
-    if planettype == 1:
-        planetint = random.randint(100, 250)
-    if planettype == 2:
-        planetint = random.randint(60, 100)
-    if planettype == 3:
-        planetint = random.randint(280, 360)
-    if planettype == 4:
-        planetint = random.randint(360, 450)
+    if planetrand:
+        if planettype == 0:
+            planetint = random.randint(150, 210)
+        if planettype == 1:
+            planetint = random.randint(100, 250)
+        if planettype == 2:
+            planetint = random.randint(60, 100)
+        if planettype == 3:
+            planetint = random.randint(280, 360)
+        if planettype == 4:
+            planetint = random.randint(360, 450)
     outputwidth.append(planetint)
     if generate2x:
         outputwidth.append(planetint * 2)
